@@ -8,4 +8,23 @@
             30
         </session-timeout>
     </session-config>
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>com.mycompany.fetchingformdata.RegisterServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>Success</servlet-name>
+        <servlet-class>com.mycompany.fetchingformdata.SuccessServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Success</servlet-name>
+        <url-pattern>/success</url-pattern>
+    </servlet-mapping>
 </web-app>

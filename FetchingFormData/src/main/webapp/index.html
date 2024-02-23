@@ -3,8 +3,55 @@
     <head>
         <title>Start Page</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            .container{
+                width: 50%;
+                border: 5px solid black;
+                margin: auto;
+                padding: 30px;
+                font-size: 20px;
+            }
+        </style>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div class="container">
+        <h1>Form</h1>
+        <form action="RegisterServlet" method="get">
+        <table>
+            <tr>
+                <td>Enter your Name:</td><td><input type="text" name="uname"></td>
+            </tr>
+            <tr>
+                <td>Enter your email:</td><td><input type="email" name="uemail"></td>
+            </tr>
+            <tr>
+                <td>Enter your password:</td><td><input type="password" name="upassword"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td><td><input type="radio" name="ugender" value="Male"><label>Male</label>&nbsp;&nbsp;<input type="radio" name="ugender" value="Female"><label>Female</label></td>
+            </tr>
+            <tr>
+                <td>Select your Course:</td>
+                <td><select name="ucourse">
+                        <option value="android">Android</option> 
+                        <option value="java">Java</option> 
+                        <option value="python">Python</option> 
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;</td><td><input type="checkbox" name="condition" value="checked"><label>Agree terms and Conditions</label></td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;</td><td><button type="submit">Submit</button>&nbsp;<button type="reset">Reset</button></td>
+            </tr>
+            
+            
+            
+            
+        </table>
+        </form>
+        </div>
+        
     </body>
 </html>
