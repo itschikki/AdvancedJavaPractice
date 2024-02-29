@@ -35,6 +35,9 @@ public class RegisterServlet extends HttpServlet{
                 out.println("<h2>Password : "+password+"</h2>");
                 out.println("<h2>Gender : "+gender+"</h2>");
                 out.println("<h2>Course : "+course+"</h2>");
+                String Sum = name+course;
+//                Setting Sum attribute in request Object
+                request.setAttribute("sum", Sum);
                 RequestDispatcher rd2 = request.getRequestDispatcher("success");
                 rd2.forward(request, response);
             }    
@@ -43,7 +46,7 @@ public class RegisterServlet extends HttpServlet{
                 out.println("<h2>Please Check terms and Conditions</h2>");
 //                out.println("<h3><a href=\"index.html\">Go to Form</a></h3>");
                RequestDispatcher rd = request.getRequestDispatcher("index.html");
-               rd.include(request, response);
+//               rd.include(request, response);
             }
         
         
