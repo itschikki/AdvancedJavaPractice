@@ -39,10 +39,20 @@ public class urlServlet1 extends HttpServlet {
             out.println("<body>");
             
             String name = request.getParameter("uname");
+            String email = request.getParameter("uemail");
             
             out.println("<h1 style='color:blue;'>Helloo "+name+"!</h1>");
+            out.println(" Click to Use Url rewriting");
             
             out.println("<h3><a href='urlServlet2?user="+name+"' >Go to next Servlet</a></h3>");
+            out.println("Click to Use hidden form field ");
+            
+            
+            out.println(""
+                    +"<form action='urlServlet2'>"
+                    +"<input type='hidden' name='email' value='"+email+"'>"
+                    +"<button type='submit'>Go to next Servlet</button>"
+                    );
             
             
             out.println("</body>");

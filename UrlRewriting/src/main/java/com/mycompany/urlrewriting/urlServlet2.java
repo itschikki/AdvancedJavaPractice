@@ -39,9 +39,15 @@ public class urlServlet2 extends HttpServlet {
             out.println("<body>");
             
             String name = request.getParameter("user");
+            String email = request.getParameter("email");
             
             out.println("<h1 style='color:pink;'>Welcome Back "+name+"</h1>");
             out.println("<h3 style='color:purple;'>Your name is fetched from url </h3>");
+            
+            out.println("<h1 style='color:pink;'>Your Email: "+email+"</h1>");
+            out.println("<h3 style='color:purple;'>Your email is fetched from hidden form field </h3>");
+            
+            
             
             
             
